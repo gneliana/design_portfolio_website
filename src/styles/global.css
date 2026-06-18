@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
+@import "@fontsource/bricolage-grotesque/600.css";
+@import "@fontsource/bricolage-grotesque/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
 @theme {
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
   --color-rust-100: #FBEAE1;
   --color-rust-200: #F2CBAE;
   --color-rust-300: #E6A372;
