@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+  --color-rust-100: #FBEAE1;
+  --color-rust-200: #F2CBAE;
+  --color-rust-300: #E6A372;
+  --color-rust-400: #D27B45;
+  --color-rust-500: #B5502A;
+  --color-rust-600: #8F3D21;
+  --color-rust-700: #6C2E18;
+  --color-rust-800: #421C0F;
+
+  --color-warmgray-100: #FAF9F7;
+  --color-warmgray-200: #F0EEEB;
+  --color-warmgray-300: #DBD7D1;
+  --color-warmgray-400: #BFB9B1;
+  --color-warmgray-500: #9C958A;
+  --color-warmgray-600: #766F64;
+  --color-warmgray-700: #514B43;
+  --color-warmgray-800: #2E2A25;
+}
