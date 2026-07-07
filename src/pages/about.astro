@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="About Eliana — design systems work, background, and how to get in touch." />
+		<title>About — Eliana</title>
+	</head>
+	<body class="font-sans bg-warmgray-100 text-warmgray-800 min-h-screen relative overflow-x-hidden">
+		<div class="grid-overlay" aria-hidden="true"></div>
+
+		<main class="relative z-10 min-h-screen flex items-center px-6 sm:px-10 py-20">
+			<div class="max-w-3xl mx-auto sm:mx-0 page-reveal">
+				<p class="font-mono font-medium text-sm uppercase tracking-[0.2em] text-rust-700 mb-5 flex items-center gap-3">
+					<span class="inline-block w-2.5 h-2.5 bg-rust-500" aria-hidden="true"></span>
+					Eliana Betancur — About
+				</p>
+
+				<h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.1] mb-6 max-w-2xl">
+					I design, I build, and I'm ready to start leading both.
+				</h1>
+
+				<p class="font-sans text-lg sm:text-xl text-warmgray-700 leading-relaxed max-w-xl mb-10">
+					I spent four years helping scale a small internal design system at UnitedHealthcare into one adopted org-wide — working closely with engineering and accessibility teams to get it there.
+				</p>
+
+				<ul class="space-y-3 mb-10 max-w-xl">
+					<li class="flex items-start gap-3 font-sans text-base text-warmgray-700">
+						<span class="inline-block w-2 h-2 mt-2 bg-rust-500 flex-shrink-0" aria-hidden="true"></span>
+						Led a WCAG 2.1 AA compliance initiative across the full component library
+					</li>
+					<li class="flex items-start gap-3 font-sans text-base text-warmgray-700">
+						<span class="inline-block w-2 h-2 mt-2 bg-rust-500 flex-shrink-0" aria-hidden="true"></span>
+						Currently finishing a Computer Science degree with a UX minor at DePaul, using coursework and side projects to stay hands-on with new front-end tech
+					</li>
+					<li class="flex items-start gap-3 font-sans text-base text-warmgray-700">
+						<span class="inline-block w-2 h-2 mt-2 bg-rust-500 flex-shrink-0" aria-hidden="true"></span>
+						Looking for a team that takes the design-to-engineering handoff seriously
+					</li>
+				</ul>
+
+
+				<nav aria-label="Professional links" class="flex flex-wrap gap-x-6 gap-y-3 font-mono text-sm">
+					<a href="https://linkedin.com/in/eliana-betancur" class="text-rust-700 underline underline-offset-4 hover:text-rust-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust-600 focus-visible:outline-offset-2">LinkedIn</a>
+					<a href="https://github.com/gneliana" class="text-rust-700 underline underline-offset-4 hover:text-rust-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust-600 focus-visible:outline-offset-2">GitHub</a>
+					<a href="#" class="text-rust-700 underline underline-offset-4 hover:text-rust-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust-600 focus-visible:outline-offset-2">Figma portfolio</a>
+					<a href="/resume.pdf" class="text-rust-700 underline underline-offset-4 hover:text-rust-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust-600 focus-visible:outline-offset-2">Download résumé</a>
+				</nav>
+			</div>
+		</main>
+	</body>
+</html>
+
+<style>
+	.grid-overlay {
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(to right, var(--color-warmgray-200) 1px, transparent 1px),
+			linear-gradient(to bottom, var(--color-warmgray-200) 1px, transparent 1px);
+		background-size: 48px 48px;
+		opacity: 0.6;
+		pointer-events: none;
+	}
+
+	.page-reveal {
+		animation: rise 0.6s ease-out both;
+	}
+
+	@keyframes rise {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.page-reveal {
+			animation: none;
+		}
+	}
+</style>
