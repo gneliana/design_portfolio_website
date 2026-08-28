@@ -3,12 +3,12 @@ import Layout from '../layouts/layout.astro';
 ---
 
 <Layout title="Betancur DS — Eliana Betancur" description="How I helped scale a siloed design system into an org-wide standard at UnitedHealthcare.">
-  <div class="px-6 sm:px-10 py-20">
+  <div class="px-6 sm:px-10 pt-8 pb-20">
     <article class="w-full page-reveal">
 
-      <nav class="mb-10">
+      <!-- <nav class="mb-10">
         <a href="/" class="font-mono text-sm text-warmgray-500 hover:text-warmgray-800 transition-colors">← Back</a>
-      </nav>
+      </nav> -->
 
       <p class="font-mono font-medium text-sm uppercase tracking-[0.2em] text-rust-700 mb-5 flex items-center gap-3">
         <span class="inline-block w-2.5 h-2.5 bg-rust-500" aria-hidden="true"></span>
@@ -20,13 +20,13 @@ import Layout from '../layouts/layout.astro';
       </h1>
 
       <p class="font-sans text-lg sm:text-xl text-warmgray-600 leading-relaxed mb-12">
-        How I helped turn a fragmented, low-adoption design system into an org-wide standard at UnitedHealthcare — through documentation, accessibility, and engineering partnership.
+        How I helped turn a fragmented, low-adoption design system into an org-wide standard at UnitedHealthcare through documentation, accessibility, and engineering partnership.
       </p>
 
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16 border-t border-b border-warmgray-300 py-8">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16 py-8 border-t border-b border-warmgray-300">
         <div>
           <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1">Role</p>
-          <p class="font-sans text-sm text-warmgray-800 font-medium">Sr. UX Engineer</p>
+          <p class="font-sans text-sm text-warmgray-800 font-medium">UX Engineer</p>
         </div>
         <div>
           <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1">Company</p>
@@ -38,57 +38,57 @@ import Layout from '../layouts/layout.astro';
         </div>
         <div>
           <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1">Tools</p>
-          <p class="font-sans text-sm text-warmgray-800 font-medium">Figma, React</p>
+          <p class="font-sans text-sm text-warmgray-800 font-medium">Figma, React, Storybook</p>
         </div>
       </div>
 
       <section class="mb-14">
         <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">The problem</h2>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-4">
-          When I joined UnitedHealthcare, the design system was in its early stages. Individual product teams had built their own component libraries, their own patterns, their own conventions — with no shared source of truth.
+          When I joined UnitedHealthcare, the design system existed in name only. Individual product teams had built their own component libraries, their own patterns, their own conventions with no shared source of truth.
         </p>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-4">
-          The same UI problems were being solved six different ways across six different teams. Design-to-engineering handoffs were inconsistent and slow. Accessibility wasn't built in anywhere — it was treated as a retrofit if it was treated at all. And engineers weren't using the system because it wasn't built with them in mind.
+          The same UI problems were being solved six different ways across six different teams. Design-to-engineering handoffs were inconsistent and slow. Accessibility was treated as a retrofit if it was treated at all. And engineers were not using the system because it was not built with them in mind.
         </p>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed">
-          The core issue wasn't the components. It was that the system had no foundation anyone could trust or build on.
+          The core issue was not the components. It was that the system had no foundation anyone could trust or build on.
         </p>
       </section>
 
       <section class="mb-14">
         <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">Where I started</h2>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-4">
-          I started by building components — getting hands-on with what existed and understanding where the gaps were. The problems weren't technical, they were structural. No contribution process, no usable documentation, no clear path for an engineer from "I need a button" to "I'm using the right button."
+          I started by building components, getting hands-on with what existed and understanding where the gaps were. The problems were not technical, they were structural. No contribution process, no usable documentation, no clear path for an engineer from needing a component to using the right one.
         </p>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed">
-          Once that was clear, my focus shifted from building components to building the system around them — the things that would make adoption possible and sustainable.
+          Once that was clear, my focus shifted from building components to building the system around them. The things that would make adoption possible and sustainable.
         </p>
       </section>
 
       <section class="mb-14">
         <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-6">What I did</h2>
-        <div class="space-y-4">
-          <div class="pl-5 border-l-2 border-warmgray-300">
-            <h3 class="font-sans font-medium text-base text-warmgray-800 mb-2">Documentation that actually got used</h3>
-            <p class="font-sans text-base text-warmgray-600 leading-relaxed">
-              I researched how leading design systems document their work and built documentation covering component usage, token architecture, and contribution guidelines — making the system self-service so engineers didn't need to ask a designer every time they needed a component.
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Documentation</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">
+              I researched how leading design systems document their work and built documentation covering component usage, token architecture, and contribution guidelines, making the system self-service so engineers did not need to ask a designer every time they needed a component.
             </p>
           </div>
-          <div class="pl-5 border-l-2 border-warmgray-300">
-            <h3 class="font-sans font-medium text-base text-warmgray-800 mb-2">Accessibility baked in, not bolted on</h3>
-            <p class="font-sans text-base text-warmgray-600 leading-relaxed">
-              I worked closely with UHC's accessibility team to lead a WCAG 2.1 AA compliance initiative across the full component library. Every component got documented keyboard behavior, ARIA patterns, and contrast requirements.
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Accessibility</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">
+              I worked closely with the accessibility team to lead a WCAG 2.1 AA compliance initiative across the full component library. Every component got documented keyboard behavior, ARIA patterns, and contrast requirements.
             </p>
           </div>
-          <div class="pl-5 border-l-2 border-warmgray-300">
-            <h3 class="font-sans font-medium text-base text-warmgray-800 mb-2">Engineering handoff process</h3>
-            <p class="font-sans text-base text-warmgray-600 leading-relaxed">
-              I helped establish a formal handoff process — clear specs, token references, and interaction states documented before anything was handed off. What got designed was what got built.
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Engineering handoff</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">
+              I helped establish a formal handoff process with clear specs, token references, and interaction states documented before anything was handed off. What got designed was what got built.
             </p>
           </div>
-          <div class="pl-5 border-l-2 border-warmgray-300">
-            <h3 class="font-sans font-medium text-base text-warmgray-800 mb-2">Org-wide adoption</h3>
-            <p class="font-sans text-base text-warmgray-600 leading-relaxed">
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Org-wide adoption</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">
               The system grew from something one team used to something adopted across the organization. Documentation and process made adoption a natural outcome rather than a mandate.
             </p>
           </div>
@@ -98,23 +98,23 @@ import Layout from '../layouts/layout.astro';
       <section class="mb-14">
         <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">What I learned</h2>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-4">
-          A design system is not a component library. The work that makes a system scale is invisible: the documentation, the processes, the relationships with engineers and accessibility specialists who make it real.
+          A design system is not a component library. The work that makes a system scale is invisible. The documentation, the processes, the relationships with engineers and accessibility specialists who make it real.
         </p>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed">
-          The most important skill I developed wasn't designing components — it was making the system easy for other people to use, contribute to, and trust.
+          The most important skill I developed was not designing components. It was making the system easy for other people to use, contribute to, and trust.
         </p>
       </section>
 
       <section class="mb-16">
         <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">Betancur DS — the artifact</h2>
         <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-8">
-          Betancur DS is a personal design system built to demonstrate the principles developed during four years at UHC — token architecture, accessibility-first components, and documentation structure.
+          Betancur DS is a personal design system built to demonstrate the principles developed during four years at UHC. Token architecture, accessibility-first components, and documentation structure.
         </p>
 
         <div class="bg-warmgray-800 rounded-lg p-8 relative overflow-hidden">
           <div class="absolute -right-8 -top-8 w-48 h-48 rounded-full border border-warmgray-700 opacity-20"></div>
           <div class="absolute right-8 top-8 w-28 h-28 rounded-full border border-warmgray-700 opacity-10"></div>
-          <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-3">Betancur DS — Official Library</p>
+          <p class="font-mono text-xs text-rust-200 uppercase tracking-widest mb-3">Betancur DS — Official Library</p>
           <h3 class="font-display font-bold text-2xl text-warmgray-100 mb-3">Design Systems</h3>
           <p class="font-sans text-sm text-warmgray-500 leading-relaxed mb-6">
             Color tokens, spacing, typography, elevation, and 14 components and growing.
@@ -135,7 +135,7 @@ import Layout from '../layouts/layout.astro';
         </div>
       </section>
 
-      <div class="border-t border-warmgray-300 pt-10">
+      <div class="pt-0">
         <a href="/" class="font-mono text-sm text-warmgray-500 hover:text-warmgray-800 transition-colors">← Back to home</a>
       </div>
 
