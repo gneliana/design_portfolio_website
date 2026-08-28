@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Eliana Betancur — Design Systems' } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans bg-warmgray-100 text-warmgray-800 min-h-screen relative overflow-x-hidden">
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <header class="relative z-20 flex items-center justify-between px-6 sm:px-10 py-6">
+      <a href="/" class="font-mono font-medium text-sm uppercase tracking-[0.2em] text-rust-700 flex items-center gap-3 hover:text-rust-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust-600 focus-visible:outline-offset-2">
+        <span class="inline-block w-2.5 h-2.5 bg-rust-500" aria-hidden="true"></span>
+        Eliana Betancur
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="flex items-center gap-8 list-none m-0 p-0">
+          <li>
+            <a href="/" class="font-mono text-sm text-warmgray-800 hover:text-warmgray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust-600 focus-visible:outline-offset-2 transition-colors">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/about" class="font-mono text-sm text-warmgray-800 hover:text-warmgray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust-600 focus-visible:outline-offset-2 transition-colors">
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="relative z-10">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  .grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--color-warmgray-200) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-warmgray-200) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+</style>

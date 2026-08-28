@@ -1,70 +1,37 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Eliana — design systems strategist bridging design intent and engineering reality." />
-		<title>Eliana — Design Systems</title>
-	</head>
-	<body class="font-sans bg-warmgray-100 text-warmgray-800 min-h-screen relative overflow-x-hidden">
-		<div class="grid-overlay" aria-hidden="true"></div>
-
-		<main class="relative z-10 min-h-screen flex items-center px-6 sm:px-10">
-			<div class="max-w-3xl mx-auto sm:mx-0 hero-reveal">
-				<p class="font-mono font-medium text-sm uppercase tracking-[0.2em] text-rust-700 mb-5 flex items-center gap-3">
-					<span class="inline-block w-2.5 h-2.5 bg-rust-500" aria-hidden="true"></span>
-					Eliana Betancur
-				</p>
-				<h1 class="font-display font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.05] mb-6">
-					I think in systems.
-				</h1>
-				<p class="font-sans text-lg sm:text-xl text-warmgray-600 leading-relaxed max-w-xl">
-					Strategic design systems work that bridges design intent and engineering reality, so good decisions scale across the whole product, not just one screen.
-				</p>
-				<p class="font-mono text-xs text-warmgray-500 mt-14">
-					Site in progress — case studies coming soon.
-				</p>
-			</div>
-		</main>
-	</body>
-</html>
+<Layout title="Eliana Betancur — Design Systems" description="Eliana Betancur — design systems strategist bridging design intent and engineering reality.">
+  <div class="min-h-[calc(100vh-80px)] flex items-center px-6 sm:px-10">
+    <div class="w-full page-reveal">
+      <h1 class="font-display font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.05] mb-6">
+        I think in systems.
+      </h1>
+      <p class="font-sans text-lg sm:text-xl text-warmgray-600 leading-relaxed mb-14">
+        Strategic design systems work that bridges design intent and engineering reality, so good decisions scale across the whole product, not just one screen.
+      </p>
+      <div>
+        <p class="font-mono text-xs text-warmgray-500 mb-4 uppercase tracking-widest">Work</p>
+        <a href="/ds" class="group flex items-center gap-4">
+          <span class="inline-block w-2.5 h-2.5 bg-rust-500 flex-shrink-0" aria-hidden="true"></span>
+          <span class="font-sans text-base text-warmgray-700 group-hover:text-warmgray-800 transition-colors">Betancur DS — Design Systems at UnitedHealthcare</span>
+          <span class="font-mono text-sm text-warmgray-400 group-hover:text-rust-600 transition-colors">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
 
 <style>
-	.grid-overlay {
-		position: absolute;
-		inset: 0;
-		background-image:
-			linear-gradient(to right, var(--color-warmgray-200) 1px, transparent 1px),
-			linear-gradient(to bottom, var(--color-warmgray-200) 1px, transparent 1px);
-		background-size: 48px 48px;
-		opacity: 0.6;
-		pointer-events: none;
-	}
-
-	.hero-reveal {
-		animation: rise 0.6s ease-out both;
-	}
-
-	@keyframes rise {
-		from {
-			opacity: 0;
-			transform: translateY(12px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.hero-reveal {
-			animation: none;
-		}
-	}
+  .page-reveal {
+    animation: rise 0.6s ease-out both;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .page-reveal { animation: none; }
+  }
 </style>
