@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
@@ -8,105 +8,89 @@ import Layout from "../layouts/Layout.astro";
 >
   <div class="min-h-[calc(100vh-80px)] flex items-start pt-8 pb-20 px-6 sm:px-10">
     <div class="w-full page-reveal">
+
       <div class="text-center mb-14">
-        <h1
-          class="font-display font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.05] mb-2 text-rust-500"
-        >
+        <h1 class="font-display font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.05] mb-2 text-rust-500">
           Eliana Betancur
         </h1>
         <p class="font-mono text-sm text-warmgray-500 tracking-widest">
-          UX Engineer · Design Systems
+          Sr. UX Engineer · Design Systems
         </p>
       </div>
 
-      <div class="mt-14">
-        <p
-          class="font-mono text-xs text-warmgray-500 mb-4 uppercase tracking-widest"
-        >
-          Work
-        </p>
-        <a href="/ds" class="group block">
-          <div
-            class="bg-white rounded-xl overflow-hidden grid grid-cols-1 sm:grid-cols-2 border border-warmgray-200 hover:border-warmgray-400 transition-colors"
-          >
-            <!-- Left: info -->
-            <div class="p-8">
-              <p
-                class="font-mono text-xs text-rust-600 uppercase tracking-widest mb-3"
-              >
-                Case Study · Design Systems
-              </p>
-              <h2
-                class="font-display font-bold text-2xl text-warmgray-800 mb-3"
-              >
-                Betancur DS
-              </h2>
-              <p
-                class="font-sans text-sm text-warmgray-600 leading-relaxed mb-6"
-              >
-                Scaling a fragmented design system to org-wide adoption at
-                UnitedHealthcare through documentation, accessibility, and
-                engineering partnership.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span
-                  class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                  >Token architecture</span
-                >
-                <span
-                  class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                  >WCAG 2.1 AA</span
-                >
-                <span
-                  class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                  >14 components</span
-                >
-                <span
-                  class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                  >Figma</span
-                >
-              </div>
-              <span
-                class="font-mono text-sm text-rust-600 underline underline-offset-4 group-hover:text-rust-500 transition-colors"
-                >View case study →</span
-              >
-            </div>
+      <div>
+        <p class="font-mono text-xs text-warmgray-500 mb-4 uppercase tracking-widest">Work</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            <!-- Right: token grid visual -->
-            <div
-              class="bg-warmgray-200 relative overflow-hidden"
-              style="min-height:400px"
-            >
-              <img
-                src="/ds-preview.png"
-                alt="Betancur DS design system preview"
-                class="absolute inset-0 w-full h-full object-cover object-top"
-              />
+          <!-- Card 1 — Betancur DS (real) -->
+          <a href="/ds" class="group block">
+            <div class="bg-white rounded-xl overflow-hidden grid grid-rows-[1fr_auto] border border-warmgray-200 hover:border-warmgray-400 transition-colors" style="min-height:300px; max-height:400px">
+              <div class="relative overflow-hidden">
+                <img
+                  src="/Preview.png"
+                  alt="Betancur DS design system preview"
+                  class="absolute inset-0 w-full h-full object-cover object-top"
+                />
+              </div>
+              <div class="p-6">
+                <p class="font-mono text-xs text-rust-600 uppercase tracking-widest mb-2">Case Study · Design Systems</p>
+                <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">Betancur DS</h2>
+                <p class="font-sans text-sm text-warmgray-600 leading-relaxed mb-4">Scaling a fragmented design system to org-wide adoption at UnitedHealthcare.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Token architecture</span>
+                  <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">WCAG 2.1 AA</span>
+                </div>
+                <span class="font-mono text-sm text-rust-600 underline underline-offset-4 group-hover:text-rust-500 transition-colors">View case study →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 — Placeholder -->
+          <div class="bg-white rounded-xl overflow-hidden border border-warmgray-200 opacity-50" style="min-height:300px; max-height:400px">
+            <div class="h-48 bg-warmgray-200"></div>
+            <div class="p-6">
+              <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-2">Coming Soon · UX Design</p>
+              <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">Project Two</h2>
+              <p class="font-sans text-sm text-warmgray-600 leading-relaxed">Case study in progress.</p>
             </div>
           </div>
-        </a>
+
+          <!-- Card 3 — Placeholder -->
+          <div class="bg-white rounded-xl overflow-hidden border border-warmgray-200 opacity-50" style="min-height:300px; max-height:400px">
+            <div class="h-48 bg-warmgray-200"></div>
+            <div class="p-6">
+              <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-2">Coming Soon · Product Design</p>
+              <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">Project Three</h2>
+              <p class="font-sans text-sm text-warmgray-600 leading-relaxed">Case study in progress.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 — Placeholder -->
+          <div class="bg-white rounded-xl overflow-hidden border border-warmgray-200 opacity-50" style="min-height:300px; max-height:400px">
+            <div class="h-48 bg-warmgray-200"></div>
+            <div class="p-6">
+              <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-2">Coming Soon · Engineering</p>
+              <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">Project Four</h2>
+              <p class="font-sans text-sm text-warmgray-600 leading-relaxed">Case study in progress.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
+
     </div>
   </div>
+</Layout>
 
-  <style>
-    .page-reveal {
-      animation: rise 0.6s ease-out both;
-    }
-    @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .page-reveal {
-        animation: none;
-      }
-    }
-  </style></Layout
->
+<style>
+  .page-reveal {
+    animation: rise 0.6s ease-out both;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .page-reveal { animation: none; }
+  }
+</style>
