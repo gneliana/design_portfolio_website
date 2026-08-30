@@ -1,0 +1,325 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="SmartBoardAI — Eliana Betancur"
+    description="A full-stack AI-powered project planning application built as a capstone project at DePaul University."
+>
+    <div class="px-6 sm:px-10 pt-8 pb-20">
+        <article class="w-full page-reveal">
+            <p
+                class="font-mono font-medium text-sm uppercase tracking-[0.2em] text-rust-700 mb-5 flex items-center gap-3"
+            >
+                <span
+                    class="inline-block w-2.5 h-2.5 bg-rust-500"
+                    aria-hidden="true"></span>
+                Capstone Project — Full Stack + AI
+            </p>
+
+            <h1
+                class="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.1] mb-6"
+            >
+                SmartBoardAI
+            </h1>
+
+            <p
+                class="font-sans text-lg sm:text-xl text-warmgray-600 leading-relaxed mb-12"
+            >
+                An AI-powered project planning application that turns
+                plain-language ideas into structured, actionable project plans —
+                built end to end by a four-person team for my DePaul University
+                capstone.
+            </p>
+
+            <div
+                class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16 py-8 border-t border-b border-warmgray-300"
+            >
+                <div>
+                    <p
+                        class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1"
+                    >
+                        Role
+                    </p>
+                    <p class="font-sans text-sm text-warmgray-800 font-medium">
+                        UX, Frontend, Team Lead
+                    </p>
+                </div>
+                <div>
+                    <p
+                        class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1"
+                    >
+                        Context
+                    </p>
+                    <p class="font-sans text-sm text-warmgray-800 font-medium">
+                        DePaul Capstone
+                    </p>
+                </div>
+                <div>
+                    <p
+                        class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1"
+                    >
+                        Timeline
+                    </p>
+                    <p class="font-sans text-sm text-warmgray-800 font-medium">
+                        Fall 2025
+                    </p>
+                </div>
+                <div>
+                    <p
+                        class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1"
+                    >
+                        Stack
+                    </p>
+                    <p class="font-sans text-sm text-warmgray-800 font-medium">
+                        React, Java, Python, MySQL
+                    </p>
+                </div>
+            </div>
+
+            <section class="mb-14">
+                <h2
+                    class="font-display font-bold text-2xl text-warmgray-800 mb-4"
+                >
+                    The problem
+                </h2>
+                <p
+                    class="font-sans text-base text-warmgray-600 leading-relaxed mb-4"
+                >
+                    Project planning tools require users to manually create,
+                    categorize, and prioritize every task from scratch. For
+                    students, freelancers, and small teams, this setup cost
+                    creates real friction before any actual work begins.
+                </p>
+                <p
+                    class="font-sans text-base text-warmgray-600 leading-relaxed"
+                >
+                    We wanted to build something that could take a
+                    plain-language idea and turn it into a structured,
+                    prioritized project plan in minutes — removing the setup
+                    barrier entirely and letting people focus on execution.
+                </p>
+            </section>
+
+            <section class="mb-14">
+                <h2
+                    class="font-display font-bold text-2xl text-warmgray-800 mb-6"
+                >
+                    What we built
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-warmgray-200 rounded-lg p-6">
+                        <p
+                            class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3"
+                        >
+                            AI project generation
+                        </p>
+                        <p
+                            class="font-sans text-sm text-warmgray-800 leading-relaxed"
+                        >
+                            Users describe an idea in plain language. The AI
+                            middleware interprets the input and generates tasks,
+                            priorities, and milestones automatically through a
+                            conversational interface.
+                        </p>
+                    </div>
+                    <div class="bg-warmgray-200 rounded-lg p-6">
+                        <p
+                            class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3"
+                        >
+                            Interactive Kanban board
+                        </p>
+                        <p
+                            class="font-sans text-sm text-warmgray-800 leading-relaxed"
+                        >
+                            A drag-and-drop board with real-time status updates,
+                            color-coded priorities, and category tags. Built in
+                            React with live synchronization across team members.
+                        </p>
+                    </div>
+                    <div class="bg-warmgray-200 rounded-lg p-6">
+                        <p
+                            class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3"
+                        >
+                            Full-stack architecture
+                        </p>
+                        <p
+                            class="font-sans text-sm text-warmgray-800 leading-relaxed"
+                        >
+                            React and TypeScript frontend, Java Spring Boot
+                            backend, Python FastAPI AI middleware, and MySQL
+                            database — each layer designed for modularity and
+                            scalability.
+                        </p>
+                    </div>
+                    <div class="bg-warmgray-200 rounded-lg p-6">
+                        <p
+                            class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3"
+                        >
+                            Team collaboration
+                        </p>
+                        <p
+                            class="font-sans text-sm text-warmgray-800 leading-relaxed"
+                        >
+                            Real-time project synchronization, shared Kanban
+                            visibility, and activity tracking built for
+                            multi-user teams with secure JWT authentication.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-14">
+                <h2
+                    class="font-display font-bold text-2xl text-warmgray-800 mb-4"
+                >
+                    My contribution
+                </h2>
+                <p
+                    class="font-sans text-base text-warmgray-600 leading-relaxed mb-4"
+                >
+                    I contributed across the full stack — from UX strategy and
+                    interface design through to frontend implementation and team
+                    coordination. With a four-person team and a tight academic
+                    timeline, everyone wore multiple hats, and I took ownership
+                    of the product experience end to end.
+                </p>
+                <p
+                    class="font-sans text-base text-warmgray-600 leading-relaxed mb-4"
+                >
+                    On the UX side I defined the user flows, designed the
+                    conversational AI interface, and shaped how the Kanban board
+                    would present AI-generated output. On the engineering side I
+                    built the React frontend, integrating the AI middleware
+                    responses into the board UI in real time.
+                </p>
+                <p
+                    class="font-sans text-base text-warmgray-600 leading-relaxed"
+                >
+                    The UX documentation is being recreated in Figma as a formal
+                    case study — the product shipped, but the design artifacts
+                    are ongoing work.
+                </p>
+            </section>
+
+            <section class="mb-14">
+                <h2
+                    class="font-display font-bold text-2xl text-warmgray-800 mb-4"
+                >
+                    What I learned
+                </h2>
+                <p
+                    class="font-sans text-base text-warmgray-600 leading-relaxed mb-4"
+                >
+                    Shipping a full product in an academic sprint taught me a
+                    lot about prioritization under real constraints. Design
+                    documentation got deprioritized in favor of shipping — a
+                    tradeoff I understood at the time and am now correcting.
+                </p>
+                <p
+                    class="font-sans text-base text-warmgray-600 leading-relaxed"
+                >
+                    More importantly, SmartBoardAI confirmed something I already
+                    believed: the best product experiences come from people who
+                    understand both sides of the stack. Designing the AI
+                    interaction layer and then building it myself meant the
+                    final product matched the intent in ways that are hard to
+                    achieve across a handoff.
+                </p>
+            </section>
+
+            <section class="mb-16">
+                <div class="flex items-center justify-between mb-6">
+                    <h2
+                        class="font-display font-bold text-2xl text-warmgray-800"
+                    >
+                        See it in action
+                    </h2>
+                    <a
+                        href="https://github.com/Green-Depaul/SmartBoardAI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="font-mono text-sm text-rust-700 underline underline-offset-4 hover:text-rust-600 transition-colors"
+                    >
+                        View on GitHub →
+                    </a>
+                </div>
+                <div
+                    class="rounded-xl overflow-hidden border border-warmgray-300"
+                    style="height:480px"
+                >
+                    <iframe
+                        src="https://drive.google.com/file/d/1tfgg1qeHmOAg4lOstlKkUsjcT85ITCST/preview"
+                        width="100%"
+                        height="100%"
+                        allowfullscreen
+                        loading="lazy"
+                        title="SmartBoardAI demo video"
+                        class="border-0"></iframe>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
+                <div class="bg-warmgray-200 rounded-lg p-6">
+                    <p
+                        class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3"
+                    >
+                        Frontend
+                    </p>
+                    <p class="font-sans text-sm text-warmgray-800">
+                        React, TypeScript, Vite
+                    </p>
+                </div>
+                <div class="bg-warmgray-200 rounded-lg p-6">
+                    <p
+                        class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3"
+                    >
+                        Backend
+                    </p>
+                    <p class="font-sans text-sm text-warmgray-800">
+                        Java Spring Boot, MySQL, JWT
+                    </p>
+                </div>
+                <div class="bg-warmgray-200 rounded-lg p-6">
+                    <p
+                        class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3"
+                    >
+                        AI Middleware
+                    </p>
+                    <p class="font-sans text-sm text-warmgray-800">
+                        Python FastAPI, Together.AI SDK
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-0">
+                <a
+                    href="/"
+                    class="font-mono text-sm text-warmgray-500 hover:text-warmgray-800 transition-colors"
+                    >← Back to home</a
+                >
+            </div>
+        </article>
+    </div>
+</Layout>
+
+<style>
+    .page-reveal {
+        animation: rise 0.6s ease-out both;
+    }
+    @keyframes rise {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .page-reveal {
+            animation: none;
+        }
+    }
+</style>

@@ -2,13 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Betancur DS — Eliana Betancur" description="How I helped scale a siloed design system into an org-wide standard at UnitedHealthcare.">
+<Layout
+  title="Betancur DS — Eliana Betancur"
+  description="How I helped scale a siloed design system into an org-wide standard at UnitedHealthcare."
+>
   <div class="px-6 sm:px-10 pt-8 pb-20">
     <article class="w-full page-reveal">
-
-      <!-- <nav class="mb-10">
-        <a href="/" class="font-mono text-sm text-warmgray-500 hover:text-warmgray-800 transition-colors">← Back</a>
-      </nav> -->
 
       <p class="font-mono font-medium text-sm uppercase tracking-[0.2em] text-rust-700 mb-5 flex items-center gap-3">
         <span class="inline-block w-2.5 h-2.5 bg-rust-500" aria-hidden="true"></span>
@@ -106,32 +105,53 @@ import Layout from '../layouts/Layout.astro';
       </section>
 
       <section class="mb-16">
-        <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">Betancur DS — the artifact</h2>
-        <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-8">
-          Betancur DS is a personal design system built to demonstrate the principles developed during four years at UHC. Token architecture, accessibility-first components, and documentation structure.
-        </p>
-
-        <div class="bg-warmgray-800 rounded-lg p-8 relative overflow-hidden">
-          <div class="absolute -right-8 -top-8 w-48 h-48 rounded-full border border-warmgray-700 opacity-20"></div>
-          <div class="absolute right-8 top-8 w-28 h-28 rounded-full border border-warmgray-700 opacity-10"></div>
-          <p class="font-mono text-xs text-rust-200 uppercase tracking-widest mb-3">Betancur DS — Official Library</p>
-          <h3 class="font-display font-bold text-2xl text-warmgray-100 mb-3">Design Systems</h3>
-          <p class="font-sans text-sm text-warmgray-500 leading-relaxed mb-6">
-            Color tokens, spacing, typography, elevation, and 14 components and growing.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-700 text-warmgray-500">Token architecture</span>
-            <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-700 text-warmgray-500">WCAG 2.1 AA</span>
-            <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-700 text-warmgray-500">14 components</span>
-          </div>
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="font-display font-bold text-2xl text-warmgray-800">Explore the system</h2>
           <a
-            href="https://www.figma.com/design/U49gXIbwVYqFNFQnUIWLqv/Eliana-Betancur---DS?node-id=91-4755"
+            href="https://www.figma.com/design/U49gXIbwVYqFNFQnUIWLqv/Eliana-Betancur---DS"
             target="_blank"
             rel="noopener noreferrer"
-            class="font-mono text-sm text-rust-300 underline underline-offset-4 hover:text-rust-200 transition-colors"
+            class="font-mono text-sm text-rust-700 underline underline-offset-4 hover:text-rust-600 transition-colors"
           >
-            View in Figma →
+            Open in Figma →
           </a>
+        </div>
+
+        <!-- Tabs -->
+        <div class="figma-viewer">
+          <div class="flex gap-0 mb-0 border-b border-warmgray-300">
+            <button
+              class="tab-btn active font-mono text-xs uppercase tracking-widest px-5 py-3 border-b-2 border-rust-500 text-rust-700 transition-colors"
+              data-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FU49gXIbwVYqFNFQnUIWLqv%2FEliana-Betancur---DS%3Fnode-id%3D38-123"
+            >
+              Cover
+            </button>
+            <button
+              class="tab-btn font-mono text-xs uppercase tracking-widest px-5 py-3 border-b-2 border-transparent text-warmgray-500 hover:text-warmgray-800 transition-colors"
+              data-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FU49gXIbwVYqFNFQnUIWLqv%2FEliana-Betancur---DS%3Fnode-id%3D3-4"
+            >
+              Foundations
+            </button>
+            <button
+              class="tab-btn font-mono text-xs uppercase tracking-widest px-5 py-3 border-b-2 border-transparent text-warmgray-500 hover:text-warmgray-800 transition-colors"
+              data-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FU49gXIbwVYqFNFQnUIWLqv%2FEliana-Betancur---DS%3Fnode-id%3D578-1337"
+            >
+              Components
+            </button>
+          </div>
+
+          <div class="rounded-b-xl overflow-hidden border border-t-0 border-warmgray-300" style="height:480px">
+            <iframe
+              id="figma-frame"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FU49gXIbwVYqFNFQnUIWLqv%2FEliana-Betancur---DS%3Fnode-id%3D38-123"
+              width="100%"
+              height="100%"
+              allowfullscreen
+              loading="lazy"
+              title="Betancur DS — Figma preview"
+              class="border-0"
+            ></iframe>
+          </div>
         </div>
       </section>
 
@@ -155,3 +175,20 @@ import Layout from '../layouts/Layout.astro';
     .page-reveal { animation: none; }
   }
 </style>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const frame = document.getElementById('figma-frame') as HTMLIFrameElement;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('active', 'border-rust-500', 'text-rust-700');
+        t.classList.add('border-transparent', 'text-warmgray-500');
+      });
+      tab.classList.add('active', 'border-rust-500', 'text-rust-700');
+      tab.classList.remove('border-transparent', 'text-warmgray-500');
+      frame.src = tab.getAttribute('data-src') || '';
+    });
+  });
+</script>
