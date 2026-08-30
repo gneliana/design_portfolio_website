@@ -1,19 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
   title="Eliana Betancur — Design Systems"
   description="Senior UX Engineer with four years of enterprise product experience, growing into design leadership."
 >
-  <div
-    class="min-h-[calc(100vh-80px)] flex items-start pt-8 pb-20 px-6 sm:px-10"
-  >
+  <div class="min-h-[calc(100vh-80px)] flex items-start pt-8 pb-20 px-6 sm:px-10">
     <div class="w-full page-reveal">
+
       <div class="text-center mb-14">
-        <h1
-          class="font-display font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.05] mb-2 text-rust-500"
-        >
+        <h1 class="font-display font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.05] mb-2 text-rust-500">
           Eliana Betancur
         </h1>
         <p class="font-mono text-sm text-warmgray-500 tracking-widest">
@@ -22,147 +19,125 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <div>
-        <p
-          class="font-mono text-xs text-warmgray-500 mb-4 uppercase tracking-widest"
-        >
-          Work
-        </p>
+        <p class="font-mono text-xs text-warmgray-500 mb-4 uppercase tracking-widest">Work</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <!-- Card 1 — Betancur DS (real) -->
-          <a href="/ds" class="group block">
-            <div
-              class="bg-white rounded-xl overflow-hidden grid grid-rows-[1fr_auto] border border-warmgray-200 hover:border-warmgray-400 transition-colors"
-              style="min-height:300px; max-height:400px"
-            >
-              <div class="relative overflow-hidden">
+
+          <!-- Card 1 — Betancur DS -->
+          <a href="/ds" class="group block" style="height:400px">
+            <div class="bg-white rounded-xl overflow-hidden flex flex-col border border-warmgray-200 hover:border-warmgray-400 transition-colors h-full">
+              <div class="relative overflow-hidden flex-1">
                 <img
                   src="/Preview.png"
                   alt="Betancur DS design system preview"
                   class="absolute inset-0 w-full h-full object-cover object-top"
                 />
               </div>
-              <div class="p-6">
-                <p
-                  class="font-mono text-xs text-rust-600 uppercase tracking-widest mb-2"
-                >
-                  Case Study · Design Systems
-                </p>
-                <h2
-                  class="font-display font-bold text-xl text-warmgray-800 mb-2"
-                >
-                  Betancur DS
-                </h2>
-                <p
-                  class="font-sans text-sm text-warmgray-600 leading-relaxed mb-4"
-                >
-                  Scaling a fragmented design system to org-wide adoption at
-                  UnitedHealthcare.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                    >Token architecture</span
-                  >
-                  <span
-                    class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                    >WCAG 2.1 AA</span
-                  >
+              <div class="p-6 flex flex-col justify-between flex-shrink-0">
+                <div>
+                  <p class="font-mono text-xs text-rust-600 uppercase tracking-widest mb-2">UX · Design Systems</p>
+                  <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">Betancur DS</h2>
+                  <p class="font-sans text-sm text-warmgray-600 leading-relaxed mb-4">Built and scaled components for an enterprise design system at UnitedHealthcare — contributing to accessibility compliance, org-wide adoption, and token architecture.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">UX Strategy</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Design Systems</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Accessibility</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Frontend</span>
+                  </div>
                 </div>
-                <span
-                  class="font-mono text-sm text-rust-600 underline underline-offset-4 group-hover:text-rust-500 transition-colors"
-                  >View case study →</span
-                >
+                <span class="font-mono text-sm text-rust-600 underline underline-offset-4 group-hover:text-rust-500 transition-colors">View case study →</span>
               </div>
             </div>
           </a>
 
           <!-- Card 2 — SmartBoardAI -->
-          <a href="/smartboard" class="group block">
-            <div
-              class="bg-white rounded-xl overflow-hidden grid grid-rows-[1fr_auto] border border-warmgray-200 hover:border-warmgray-400 transition-colors"
-              style="min-height:300px; max-height:400px"
-            >
-              <div class="bg-warmgray-200 relative overflow-hidden">
-                <!-- Add screenshot here later -->
+          <a href="/smartboard" class="group block" style="height:400px">
+            <div class="bg-white rounded-xl overflow-hidden flex flex-col border border-warmgray-200 hover:border-warmgray-400 transition-colors h-full">
+              <div class="bg-warmgray-200 relative overflow-hidden flex-1">
               </div>
-              <div class="p-6">
-                <p
-                  class="font-mono text-xs text-rust-600 uppercase tracking-widest mb-2"
-                >
-                  Capstone · Full Stack + AI
-                </p>
-                <h2
-                  class="font-display font-bold text-xl text-warmgray-800 mb-2"
-                >
-                  SmartBoardAI
-                </h2>
-                <p
-                  class="font-sans text-sm text-warmgray-600 leading-relaxed mb-4"
-                >
-                  AI-powered project planning that turns plain-language ideas
-                  into structured Kanban boards.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                    >React</span
-                  >
-                  <span
-                    class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600"
-                    >Python AI</span
-                  >
+              <div class="p-6 flex flex-col justify-between flex-shrink-0">
+                <div>
+                  <p class="font-mono text-xs text-rust-600 uppercase tracking-widest mb-2">UX · Product Design · AI</p>
+                  <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">SmartBoardAI</h2>
+                  <p class="font-sans text-sm text-warmgray-600 leading-relaxed mb-4">Led UX and frontend development for an AI-powered planning tool that generates structured project boards from plain-language input.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">UX Design</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">AI</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Frontend</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Product Design</span>
+                  </div>
                 </div>
-                <span
-                  class="font-mono text-sm text-rust-600 underline underline-offset-4 group-hover:text-rust-500 transition-colors"
-                  >View case study →</span
-                >
+                <span class="font-mono text-sm text-rust-600 underline underline-offset-4 group-hover:text-rust-500 transition-colors">View case study →</span>
               </div>
             </div>
           </a>
 
-          <!-- Card 3 — Placeholder -->
-          <div
-            class="bg-white rounded-xl overflow-hidden border border-warmgray-200 opacity-50"
-            style="min-height:300px; max-height:400px"
-          >
-            <div class="h-48 bg-warmgray-200"></div>
-            <div class="p-6">
-              <p
-                class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-2"
-              >
-                Coming Soon · Product Design
-              </p>
-              <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">
-                Project Three
-              </h2>
-              <p class="font-sans text-sm text-warmgray-600 leading-relaxed">
-                Case study in progress.
-              </p>
+          <!-- Card 3 — Design Token Engine -->
+          <a href="/token-engine" class="group block" style="height:400px">
+            <div class="bg-white rounded-xl overflow-hidden flex flex-col border border-warmgray-200 hover:border-warmgray-400 transition-colors h-full">
+              <div class="bg-warmgray-800 relative overflow-hidden flex-1 flex items-center justify-center">
+                <div class="p-6 w-full">
+                  <div class="font-mono text-xs text-warmgray-500 mb-3">tokens.json → tokens.css</div>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-rust-400 flex-shrink-0"></span>
+                      <span class="font-mono text-xs text-warmgray-400">color.primary = #B5502A</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-warmgray-500 flex-shrink-0"></span>
+                      <span class="font-mono text-xs text-warmgray-400">spacing.md = 16px</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#E8A838"></span>
+                      <span class="font-mono text-xs text-warmgray-400">color.warning = #E8A838</span>
+                    </div>
+                    <div class="h-px bg-warmgray-700 my-2"></div>
+                    <div class="font-mono text-xs text-warmgray-600">--color-primary: #B5502A;</div>
+                    <div class="font-mono text-xs text-warmgray-600">--spacing-md: 16px;</div>
+                    <div class="font-mono text-xs text-warmgray-600">--color-warning: #E8A838;</div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-shrink-0">
+                <div>
+                  <p class="font-mono text-xs text-rust-600 uppercase tracking-widest mb-2">UX Engineering · Design Systems</p>
+                  <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">Design Token Engine</h2>
+                  <p class="font-sans text-sm text-warmgray-600 leading-relaxed mb-4">A design token pipeline connecting Figma to code — processing and exporting tokens across CSS, JSON, and Swift formats.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">UX Engineering</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Design Systems</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Tooling</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Backend</span>
+                  </div>
+                </div>
+                <span class="font-mono text-sm text-rust-600 underline underline-offset-4 group-hover:text-rust-500 transition-colors">View project →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 — RecipeShare -->
+          <div class="block opacity-60" style="height:400px">
+            <div class="bg-white rounded-xl overflow-hidden flex flex-col border border-warmgray-200 h-full">
+              <div class="bg-warmgray-200 relative overflow-hidden flex-1">
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-shrink-0">
+                <div>
+                  <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-2">UX · Full Stack</p>
+                  <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">RecipeShare</h2>
+                  <p class="font-sans text-sm text-warmgray-600 leading-relaxed mb-4">A full-stack recipe sharing app built with Spring Boot. UX redesign in progress.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">UX in progress</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Frontend</span>
+                    <span class="font-mono text-xs px-3 py-1 rounded-full border border-warmgray-300 text-warmgray-600">Product Design</span>
+                  </div>
+                </div>
+                <span class="font-mono text-sm text-warmgray-400">Coming soon</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 4 — Placeholder -->
-          <div
-            class="bg-white rounded-xl overflow-hidden border border-warmgray-200 opacity-50"
-            style="min-height:300px; max-height:400px"
-          >
-            <div class="h-48 bg-warmgray-200"></div>
-            <div class="p-6">
-              <p
-                class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-2"
-              >
-                Coming Soon · Engineering
-              </p>
-              <h2 class="font-display font-bold text-xl text-warmgray-800 mb-2">
-                Project Four
-              </h2>
-              <p class="font-sans text-sm text-warmgray-600 leading-relaxed">
-                Case study in progress.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
+
     </div>
   </div>
 </Layout>
@@ -172,18 +147,10 @@ import Layout from "../layouts/Layout.astro";
     animation: rise 0.6s ease-out both;
   }
   @keyframes rise {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .page-reveal {
-      animation: none;
-    }
+    .page-reveal { animation: none; }
   }
 </style>

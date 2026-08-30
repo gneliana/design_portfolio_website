@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Design Token Engine — Eliana Betancur"
+  description="A Java CLI tool that processes and transforms design tokens from Figma across CSS, JSON, and Swift formats."
+>
+  <div class="px-6 sm:px-10 pt-8 pb-20">
+    <article class="w-full page-reveal">
+
+      <p class="font-mono font-medium text-sm uppercase tracking-[0.2em] text-rust-700 mb-5 flex items-center gap-3">
+        <span class="inline-block w-2.5 h-2.5 bg-rust-500" aria-hidden="true"></span>
+        Project — UX Engineering · Design Systems
+      </p>
+
+      <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.1] mb-6">
+        Design Token Engine
+      </h1>
+
+      <p class="font-sans text-lg sm:text-xl text-warmgray-600 leading-relaxed mb-12">
+        A design token pipeline connecting Figma to code — processing and exporting tokens across CSS, JSON, and Swift formats. Built for SE-350 Object Oriented Software Development at DePaul University.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16 py-8 border-t border-b border-warmgray-300">
+        <div>
+          <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1">Role</p>
+          <p class="font-sans text-sm text-warmgray-800 font-medium">Solo Project</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1">Context</p>
+          <p class="font-sans text-sm text-warmgray-800 font-medium">DePaul SE-350</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1">Status</p>
+          <p class="font-sans text-sm text-warmgray-800 font-medium">In progress</p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-warmgray-500 uppercase tracking-widest mb-1">Stack</p>
+          <p class="font-sans text-sm text-warmgray-800 font-medium">Java 17, JSON, CSS</p>
+        </div>
+      </div>
+
+      <section class="mb-14">
+        <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">The problem</h2>
+        <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-4">
+          Design tokens are the foundation of scalable design systems. But getting them from a design tool like Figma into production code — consistently, across platforms — is a manual and error-prone process. A designer changes a color in Figma, but that change has to be manually propagated to CSS, iOS, and Android separately.
+        </p>
+        <p class="font-sans text-base text-warmgray-600 leading-relaxed">
+          The Design Token Engine automates that pipeline. A token is defined once, processed through the engine, and exported into whatever format the consuming platform needs.
+        </p>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">The pipeline</h2>
+        <div class="bg-warmgray-800 rounded-lg p-8 font-mono text-sm">
+          <p class="text-warmgray-500 mb-4">Three-layer pipeline</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-4">
+              <span class="text-rust-300">Figma Design System</span>
+              <span class="text-warmgray-600">→ export tokens.json</span>
+            </div>
+            <div class="flex items-center gap-4 pl-8">
+              <span class="text-warmgray-400">↓</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-rust-300">Design Token Engine</span>
+              <span class="text-warmgray-600">← this project</span>
+            </div>
+            <div class="text-warmgray-600 pl-4 text-xs">ingest · validate · resolve aliases · export</div>
+            <div class="flex items-center gap-4 pl-8">
+              <span class="text-warmgray-400">↓</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-rust-300">tokens.css / tokens.json / tokens.swift</span>
+            </div>
+            <div class="flex items-center gap-4 pl-8">
+              <span class="text-warmgray-400">↓</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-rust-300">React / iOS / Android</span>
+              <span class="text-warmgray-600">components update automatically</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-6">Design patterns used</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Builder + Factory</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">Token and TokenGroup construction uses the Builder pattern for step-by-step object creation. Factory pattern picks the right exporter at runtime.</p>
+          </div>
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Strategy</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">Export algorithms are swappable via Strategy pattern — CSS, JSON, and Swift exporters share the same interface without changing core logic.</p>
+          </div>
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Composite + Observer</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">TokenGroup containing Tokens uses Composite for natural nesting. Observer broadcasts token changes to all dependent components.</p>
+          </div>
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Command</p>
+            <p class="font-sans text-sm text-warmgray-800 leading-relaxed">Export and edit actions use the Command pattern to enable undo history across operations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="font-display font-bold text-2xl text-warmgray-800 mb-4">Why this matters</h2>
+        <p class="font-sans text-base text-warmgray-600 leading-relaxed mb-4">
+          UX Engineers bridge design and engineering. Design token tooling is a core part of that role at companies building large-scale design systems. Tools like Amazon Style Dictionary, Figma Tokens, and Theo solve this problem in JavaScript. This project explores the same problem space using Java OOP principles — demonstrating that understanding of the full pipeline, not just one layer of it.
+        </p>
+        <p class="font-sans text-base text-warmgray-600 leading-relaxed">
+          This project connects directly to Betancur DS — the same token architecture documented in Figma is what this engine is built to process and export.
+        </p>
+      </section>
+
+      <section class="mb-16">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-display font-bold text-2xl text-warmgray-800">Status</h2>
+          <a
+            href="https://github.com/gneliana/design-token-engine"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-mono text-sm text-rust-700 underline underline-offset-4 hover:text-rust-600 transition-colors"
+          >
+            View on GitHub →
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Done</p>
+            <ul class="space-y-2 font-sans text-sm text-warmgray-800">
+              <li>Core token model</li>
+              <li>Token, TokenType, TokenGroup</li>
+              <li>TokenRegistry</li>
+              <li>Builder pattern</li>
+            </ul>
+          </div>
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">In progress</p>
+            <ul class="space-y-2 font-sans text-sm text-warmgray-800">
+              <li>TokenResolver (alias resolution)</li>
+              <li>Export layer (CSS, JSON, Swift)</li>
+              <li>Factory + Strategy patterns</li>
+            </ul>
+          </div>
+          <div class="bg-warmgray-200 rounded-lg p-6">
+            <p class="font-mono text-xs text-rust-700 uppercase tracking-widest mb-3">Planned</p>
+            <ul class="space-y-2 font-sans text-sm text-warmgray-800">
+              <li>Observer + Command patterns</li>
+              <li>Undo history</li>
+              <li>Live theme switcher demo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="pt-0">
+        <a href="/" class="font-mono text-sm text-warmgray-500 hover:text-warmgray-800 transition-colors">← Back to home</a>
+      </div>
+
+    </article>
+  </div>
+</Layout>
+
+<style>
+  .page-reveal {
+    animation: rise 0.6s ease-out both;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .page-reveal { animation: none; }
+  }
+</style>
